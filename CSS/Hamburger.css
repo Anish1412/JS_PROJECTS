@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+div:not(.dd) {
+    border: 1px solid black;
+    width: 43px;
+    height: 65px;
+    overflow: hidden;
+    margin-left: 50px;
+    position: relative;
+    padding-right: 5px;
+    transform: rotate(270deg);
+    transition-duration: 1s;
+    display: inline-block;
+    background-color: #173459;
+}
+
+p:not(.dd-content) {
+    font-size: 45px;
+    display: inline;
+    transition-duration: 1s;
+    color: white;
+}
+
+#demo1 {
+    position: absolute;
+    top: -40px;
+    left: 5px;
+}
+
+#demo2 {
+    position: absolute;
+    top: -40px;
+    left: 15px;
+}
+
+#demo3 {
+    position: absolute;
+    top: -40px;
+    left: 25px;
+}
+
+input {
+    display: none;
+}
+
+/* for changing hamburger background */
+/* input:checked ~ div:not(.dd){
+    background-color:#173459;
+    } */
+input:checked~div>#demo1 {
+    transform: rotate(-45deg);
+    left: 13px;
+}
+
+input:checked~div>#demo2 {
+    top: 10px;
+    color: white;
+}
+
+input:checked~div>#demo3 {
+    transform: rotate(45deg);
+    left: 17px;
+    color: white;
+}
+
+.dd {
+    background-color: green;
+    height: 0px;
+    width: 230px;
+    overflow: hidden;
+    word-wrap: break-word;
+    transition-duration: 1s;
+    position: absolute;
+    top: 62px;
+    left: 47px;
+}
+
+input:checked~div:hover+.dd {
+    height: 180px;
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.30), 0 14px 11px rgba(0, 0, 0, 0.22);
+}
+
+.dd>a {
+    background-color: white;
+    height: 45px;
+    text-align: center;
+    line-height: 44px;
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.dd>a:hover {
+    background-color: #ff3030;
+    color: white;
+}

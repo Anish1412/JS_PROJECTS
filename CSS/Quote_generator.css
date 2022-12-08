@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #C65D0D;
+}
+
+span {
+    font-family: Times new Roman;
+    border: 10px double black;
+    font-size: 32px;
+    font-weight: bold;
+    position: relative;
+    top: 45px;
+    left: 44px;
+    padding: 5px;
+}
+
+.card {
+    margin-top: 90px;
+    background-color: white;
+    height: 480px;
+    width: 368px;
+    position: relative;
+}
+
+.card>#demo1 {
+    font-weight: bold;
+    font-size: 32px;
+    font-family: cursive;
+    padding: 65px 25px 0px 25px;
+}
+
+.card>#demo2 {
+    font-family: fantasy;
+    font-size: 22px;
+    font-weight: bold;
+    color: #C65D0D;
+    float: right;
+    margin-right: 10px;
+}
+
+.card>button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 23px;
+    font-family: cursive;
+    position: fixed;
+    top: 80%;
+    left: 30%;
+}

@@ -1,0 +1,98 @@
+@keyframes ball-1 {
+    25% {
+        transform: translateY(-100px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes span-1 {
+    25% {
+        visibility: hidden;
+    }
+
+    50% {
+        visibility: visible;
+    }
+
+    75% {
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: visible;
+    }
+}
+
+.ball-1,
+.ball-2,
+.ball-3 {
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    border-radius: 50%;
+    float: left;
+    margin: 250px 8px 0px 8px;
+}
+
+.ball-1 {
+    animation-name: ball-1;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+    animation-delay: .2s;
+    margin-left: 90px;
+}
+
+.ball-2 {
+    animation-name: ball-1;
+    animation-duration: 3.5s;
+    animation-delay: .4s;
+    animation-iteration-count: infinite;
+}
+
+.ball-3 {
+    animation-name: ball-1;
+    animation-duration: 3.5s;
+    animation-delay: .6s;
+    animation-iteration-count: infinite;
+}
+
+.load {
+    text-align: center;
+    position: relative;
+    top: 40px;
+}
+
+span:nth-child(1) {
+    animation-name: span-1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: .1s;
+    visibility: hidden;
+}
+
+span:nth-child(2) {
+    animation-name: span-1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: .2s;
+    visibility: hidden;
+}
+
+span:nth-child(3) {
+    animation-name: span-1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: .3s;
+    visibility: hidden;
+}
