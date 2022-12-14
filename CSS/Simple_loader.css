@@ -42,7 +42,7 @@
     background-color: black;
     border-radius: 50%;
     float: left;
-    margin: 250px 8px 0px 8px;
+    margin: 180px 8px 0px 8px;
 }
 
 .ball-1 {
@@ -50,7 +50,7 @@
     animation-duration: 3.5s;
     animation-iteration-count: infinite;
     animation-delay: .2s;
-    margin-left: 90px;
+    margin-left: 350px;
 }
 
 .ball-2 {
@@ -70,7 +70,8 @@
 .load {
     text-align: center;
     position: relative;
-    top: 40px;
+    top: 260px;
+    left:-310px;
 }
 
 span:nth-child(1) {
