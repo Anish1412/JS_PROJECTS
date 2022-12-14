@@ -7,8 +7,8 @@ body{
     height:200px;
     border-bottom:30px solid white;
     border-radius:50%;
-    margin-top:130px;
-    margin-left:95px;
+    margin-top:50px;
+    margin-left:370px;
     transform:rotate(45deg);
     }
     span{
@@ -16,7 +16,7 @@ body{
     font-family:cursive;
     font-weight:bold;
     color:white;
-    line-height:200px;
-    margin-left:50px;
+    line-height:140px;
+    margin-left:290px;
     text-shadow:1px 1px 5px white;
     }

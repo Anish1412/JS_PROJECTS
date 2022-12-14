@@ -182,3 +182,7 @@ let time = setInterval(function () {
     }, 10200);
 
 }, 10100);
+
+setTimeout(() => {
+    document.querySelector(".audio").muted = false;
+},10000)
