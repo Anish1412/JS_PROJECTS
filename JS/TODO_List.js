@@ -1,13 +1,17 @@
 // "Tasks" LocalStorage
 let tasks = JSON.parse(localStorage.getItem("Tasks"));
 let arrTasks = [];
-arrTasks.push(tasks);
+if(tasks != null){
+  arrTasks.push(tasks);
+}
 let newArray = arrTasks.flat(Infinity);
 
 // "BooleanValue" LocalStorage
 let boolValue = JSON.parse(localStorage.getItem("BooleanValue"));
 let checkboxValue = [];
-checkboxValue.push(boolValue);
+if(boolValue != null){
+  checkboxValue.push(boolValue);
+}
 let newCheckboxValue = checkboxValue.flat(Infinity);
 
 function retainTask(id) {
