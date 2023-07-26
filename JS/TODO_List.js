@@ -22,12 +22,12 @@ function retainTask(id) {
     "height:18px; width:18px' onclick='cancelTask(" +
     id +
     ")'>" +
-    "<button type='button' class='btn2' onclick='updateTask(" +
-    id +
-    ")'>Update Task</button>" +
     "<button type='button' class='btn1' onclick='removeTask(" +
     id +
-    ")'>Delete Task</button>";
+    ")'><i class='fa-solid fa-trash-can'></i></button>"+
+    "<button type='button' class='btn2' onclick='updateTask(" +
+    id +
+    ")'><i class='fa-solid fa-pen-to-square'></i></button>";
   document.querySelectorAll("li")[id].style.opacity = "1";
   newCheckboxValue[id] = false;
   localStorage.setItem("BooleanValue", JSON.stringify(newCheckboxValue));
@@ -59,7 +59,8 @@ function updateTask(id) {
 
 // ********* Create tasks into the todo list *********
 let createTask = () => {
-  let task = prompt("Enter Task");
+  // let task = prompt("Enter Task");
+  let task = document.querySelector("#task").value;
   if (task) {
     newArray.push(task);
     localStorage.setItem("Tasks", JSON.stringify(newArray));
@@ -79,8 +80,9 @@ let createTask = () => {
       btn.onclick = () => {
         updateTask(tasks.length - 1);
       };
-      let btnText = document.createTextNode("Update Task");
-      btn.appendChild(btnText);
+      let icon1 = document.createElement("i");
+      icon1.className = "fa-solid fa-pen-to-square";
+      btn.appendChild(icon1);
 
       let btn1 = document.createElement("button");
       btn1.type = "button";
@@ -88,19 +90,22 @@ let createTask = () => {
       btn1.onclick = () => {
         removeTask(tasks.length - 1);
       };
-      let btnText1 = document.createTextNode("Delete Task");
-      btn1.appendChild(btnText1);
+      let icon2 = document.createElement("i");
+      icon2.className = "fa-solid fa-trash-can";
+      btn1.appendChild(icon2);
 
       li.appendChild(text);
       li.appendChild(input);
-      li.appendChild(btn);
       li.appendChild(btn1);
-      li.style = "margin:15px 15px 15px 0px; font-size:20px";
+      li.appendChild(btn);
+      li.style = "margin:15px 15px 15px 30px; font-size:20px;font-family:verdana;";
       document.getElementById("demo").append(li);
 
       // ------ Boolean Value Array ------
       newCheckboxValue.push(false);
       localStorage.setItem("BooleanValue", JSON.stringify(newCheckboxValue));
+      // Emptying text field
+      document.querySelector("#task").value = "";
     }
   }
 };
@@ -134,8 +139,9 @@ for (let i = 0; i < tasks.length; i++) {
     btn.onclick = () => {
       updateTask(i);
     };
-    let btnText = document.createTextNode("Update Task");
-    btn.appendChild(btnText);
+    let icon1 = document.createElement("i");
+    icon1.className = "fa-solid fa-pen-to-square";
+    btn.appendChild(icon1);
 
     let btn1 = document.createElement("button");
     btn1.type = "button";
@@ -143,14 +149,15 @@ for (let i = 0; i < tasks.length; i++) {
     btn1.onclick = () => {
       removeTask(i);
     };
-    let btnText1 = document.createTextNode("Delete Task");
-    btn1.appendChild(btnText1);
+    let icon2 = document.createElement("i");
+    icon2.className = "fa-solid fa-trash-can";
+    btn1.appendChild(icon2);
 
     li.appendChild(text);
     li.appendChild(input);
-    li.appendChild(btn);
     li.appendChild(btn1);
-    li.style = "margin:15px 15px 15px 0px; font-size:20px";
+    li.appendChild(btn);
+    li.style = "margin:15px 15px 15px 30px; font-size:19px; font-family:verdana;";
     document.getElementById("demo").append(li);
   }
 }
